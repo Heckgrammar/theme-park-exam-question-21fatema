@@ -4,6 +4,23 @@
     {
         static void Main(string[] args)
         {
+            int price = 15;
+            int discount = 5;
+            int total;
+
+            Console.Write("Enter number of people: ");
+            int people = Convert.ToInt32(Console.ReadLine());
+
+            total = people * price;
+
+            if (people >= 6)
+            {
+                total -= discount;
+            }
+
+            Console.WriteLine($"Total cost is £{total}");
+
+            
             /* A theme park charges £15 per person for a daily ticket. If there are six or more people in a group, the group is given a £5 discount.
                Write a C# program to calculate the total charge for a group of people visiting the theme park.
                The program must:
